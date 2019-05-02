@@ -15,6 +15,45 @@ Things you may want to cover:
 
 * Database initialization
 
+
+## userテーブル
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|mailaddres|text|null: false, foreign_key: true, unique: true|
+|name|text|null: false, unique: true|
+
+
+## membersテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+
+## messagesテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|body|text|null: false|
+|image|string||
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+
+### Association
+## members
+- belongs_to :user
+- has_many : messages
+
+## user
+- belongs_to :members
+- has_many : messages
+
+## messages
+- belongs_to :members
+- belongs_to :user
+
+
 * How to run the test suite
 
 * Services (job queues, cache servers, search engines, etc.)
