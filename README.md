@@ -29,7 +29,7 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|text_id|integer|null: false, foreign_key: true|
 
 ## messagesテーブル
 
@@ -37,7 +37,7 @@ Things you may want to cover:
 |------|----|-------|
 |body|text|null: false|
 |image|string||
-|user_id|integer|null: false, foreign_key: true|
+|text_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
 ### Association
