@@ -37,8 +37,8 @@ Things you may want to cover:
 |------|----|-------|
 |body|text|null: false|
 |image|string||
-|text_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|text_id|integer|null: false, foreign_key: references|
+|group_id|integer|null: false, foreign_key: references|
 
 ### Association
 ## members
