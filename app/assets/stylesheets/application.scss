@@ -1,0 +1,73 @@
+@import "./reset";
+@import "font-awesome";
+
+.header {
+  background-color: #38AEF0;
+  text-align: center;
+  color: white;
+}
+
+.wrapper{
+  box-sizing: border-box;
+  display: flex;
+  
+}
+.chat-side {
+  color: white;
+  font-weight: bold;
+  margin: 0;
+  padding: 0 ;
+  height: 714px;
+  width: 300px;
+}
+
+  .side-header{
+    background-color: #253141;
+    font-size: 16px;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    width: 300px;
+    padding: 20px;
+  }
+
+  .side-header--user_name{
+    font-weight: 700px;
+  }
+  .user-menu{
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  // .user-menu__edit-user{
+  //   display: list-item;
+  // }
+  // .user-menu__new-group{
+  //   display: list-item;
+  // }
+
+
+  .groups{
+  background-color:   #2f3e51;  
+  box-sizing: border-box;
+  font-size: 15px;
+  align-items: center;
+  justify-content: space-between;
+  overflow-x:scroll;
+  overflow-y:scroll;
+  widows: 300px;
+  height: 614px;
+  padding: 20px 20px 0 20px;
+  }
+
+
+
+
+
+// .chat-main
+//   .main-header
+//   .messages
+//   .form
+//     .new-massage
+
+
