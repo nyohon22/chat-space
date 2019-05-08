@@ -13,25 +13,35 @@
 .wrapper 
   .chat-side
     .side-header
-      %p.side-header--user_name RYO
+      %p.side-header__user_name RYO
       %ul.user-menu
-        %li.user-menu__new-group
+        %ul.user-menu__new-group
           %i.fa.fa-cog
-        %li.user-menu__edit-user
+        %ul.user-menu__edit-user
           %i.fa.fa-edit
     .groups
       %p 仮
 
   .chat-main
     .main-header
-      .current-group
-      .main-header__edit-btn
-        %edit
+      %a.main-header__edit-btn Edit
+    .current-group
+    
+      %h2.current-group__name グループ２
+      %ul.member-list
+        Member：
+        %li.member-list__member RYO
+
+
     .message
-  .form
-    .new-massage
-      .input-box
-      .new-message__submit-btn
+      .form
+        .new-massage
+        .input-box
+          %input#message_content.input-box__text{:name => "message[content]", :placeholder => "type a message", :type => "text"}
+            %label.image-label
+            %i.fa.fa-image
+              %input#message_image.image-label__input{:name => "message[image]", :type => "file"}
+          %input.new-message__submit-btn{"data-disable-with" => "Send", :name => "commit", :type => "submit", :value => "Send"}
 
 
 
