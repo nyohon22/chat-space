@@ -19,8 +19,8 @@ Things you may want to cover:
 ## userテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: references|
-|mailaddres|text|null: false, foreign_key: references, unique: true|
+|user_id|integer|null: false|
+|mailaddres|text|null: false,unique: true|
 |name|text|null: false, unique: true|
 
 
@@ -59,12 +59,11 @@ Things you may want to cover:
 
 ## members
 - belongs_to :user
-- has_many : messages
+- has_many : messages throug:group
 
 ## messages
 - belongs_to :members
-- belongs_to :user
-
+- belongs_to :user trough:group
 
 ## group
 - has_many :members
