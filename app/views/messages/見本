@@ -49,3 +49,11 @@
                   %i.fa.fa-image
                   %input#message_image.image-label__input{:name => "message[image]", :type => "file"}/
               %input.new-message__submit-btn{"data-disable-with" => "Send", :name => "commit", :type => "submit", :value => "Send"}/
+
+
+
+
+HAMLの見本！
+          -# %form#new_message.new-message{"accept-charset" => "UTF-8", :action => "/groups/1064/messages", :enctype => "multipart/form-data", :method => "post"}
+          -# %input{:name => "utf8", :type => "hidden", :value => "✓"}/
+          -# %input{:name => "authenticity_token", :type => "hidden", :value => "e/GySVGZPk7v5ro/CHlcLeGllhnAiEqOytF27Av0+hNjXeoFFBRWu/lq6gZp7ifiWv3M2YX9SFLR4IuiTgcjxQ=="}

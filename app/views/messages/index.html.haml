@@ -26,22 +26,13 @@
     .main-header
       %a.main-header__edit-btn Edit
     .current-group
-    
       %h2.current-group__name グループ２
       %ul.member-list
         Member：
         %li.member-list__member RYO
-
-
-    .message
-      .form
-        .new-massage
-        .input-box
-          %input#message_content.input-box__text{:placeholder => "type a message", :type => "text"}
-            %label.image-label
-            %i.fa.fa-image
-              %input#message_image.image-label__input{:name => "message[image]", :type => "file"}
-          %input.new-message__submit-btn{"data-disable-with" => "Send", :name => "commit", :type => "submit", :value => "Send"}
-
-
-
+      .message
+        .form
+          .input-box
+          %input.font-awesome{:type => "text",:placeholder => "&#xf03e;あああ" }
+          %i.fa.fa-image
+          %input.new-message__submit-btn{"data-disable-with" => "Send", :name => "commit", :type => "submit", :value => "Send"}/

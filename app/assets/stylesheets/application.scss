@@ -15,13 +15,13 @@ $border:#eeeeee;
 }
 
 .wrapper{
-  height:100%;
   box-sizing: border-box;
   display: flex;
   justify-content: flex-start;
   
 }
 .chat-side {
+  height: calc(100vh - 82px);
   color: white;
   font-weight: bold;
   bottom: 0;
@@ -35,7 +35,7 @@ $border:#eeeeee;
     font-size: 16px;
     box-sizing: border-box;
     align-items: center;
-    height: 100px;
+    height: 82px;
     width: 300px;
     padding: 20px;
     display:flex;
@@ -50,12 +50,12 @@ $border:#eeeeee;
     flex-direction: row-reverse;
     
   }
-  // .user-menu__edit-user{
-  //   display: list-item;
-  // }
-  // .user-menu__new-group{
-  //   display: list-item;
-  // }
+  .user-menu__edit-user{
+    padding:0 5px 0 0;
+  }
+    // .user-menu__new-group{
+    //   display: list-item;
+    // }
 
 
   .groups{
@@ -67,16 +67,15 @@ $border:#eeeeee;
   justify-content: space-between;
   overflow-x:scroll;
   overflow-y:scroll;
-  widows: 300px;
-  height: 600px;
+  width: 300px;
+  height: calc(100vh - 82px);
   padding: 20px 20px 0 20px;
   }
 
   .chat-main{
-    height: 92px;
-    width: 900px;
-    background-color:#fafafa;
- 
+    // float:right;
+    height: 82px;
+    width:calc(100vw - 300px);
   }
   .main-header{
     float: right;
@@ -90,7 +89,6 @@ $border:#eeeeee;
 .current-group{
   display: box;
   margin:35px;
-
 }
 .current-group__name{
   color: #33333;
@@ -101,10 +99,10 @@ $border:#eeeeee;
   font-size:12px;
   color:#999999;
   display: flex;
-  margin:15px 0;
+  margin: 0;
 }
 .main-header__edit-btn{
-  float: right;
+  // float: right;
   line-height: 40px;
   padding: 0 20px;
   margin-top: 30px;
@@ -115,38 +113,58 @@ $border:#eeeeee;
 
 
   .messages{
-    box-sizing:border-box;
-    display:block;
-    height:calc(100vh - 190px);
+    // box-sizing:border-box;
+    // display:block;
+    width: calc(100vw - 300px);
+    height: calc(100vh - 190px);
     overflow-x: scroll;
     overflow-y: scroll;
-    padding:46px 40px 40px 46px;
     background-color: #fafafa;
-    width:300px;
-
   }
   .form{
-    box-sizing: content-box;
-    position:absolute;
+    width: calc(100vw - 300px);
+    position: absolute;;
     bottom: 0;
-    margin:0;
-    width: 100%;
     height: 90px;
-    background-color: #ddd;    
-  }
+    background-color: #ddd;
+    }
+
   .new-massage{
-      float: right;
       height: 50px;
-      line-height: 50px;
-      padding: 0 20px;
-      margin-top: 30px;
+      padding: 20px;
+      background-image: url("sicon16.gif");
       border: solid 1px $light_blue;
-      color: $light_blue;
-
   }
-.input-box{
-  box-sizing: content-box;
-  right:0;
+  .input-box{
+    font-family: FontAwesome;
+    text-decoration: inherit;
+    position:absolute;
+    height: 50px;
+    width: 800px;
+    padding: 10px;
+    right:0;
+  }
 
+  // .input-box{
+  //   font-family: FontAwesome;
+  //   font-style: normal;
+  //   font-weight: normal;
+  //   text-decoration: inherit;
+  //   }
+  input::-webkit-input-placeholder{
+    font-family: FontAwesome;
+    color: red;
+    text-align: center;
+    font-size: 16px;
+  }
+  
+  .new-message__submit-btn {
+    float:right;
+    width: 100px;
+    height: 50px;
+    padding: 0 30px;
+    margin-left: 15px;
+    background-color: #38aef0;
+    color: white;
+    cursor: pointer;
 }
-
