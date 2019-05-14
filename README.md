@@ -59,11 +59,11 @@ Things you may want to cover:
 
 ## members
 - belongs_to :user
-- has_many : messages throug:group
+- has_many : messages throug: :group
 
 ## messages
 - belongs_to :members
-- belongs_to :user trough:group
+- has_many :user trough: :group
 
 ## group
 - has_many :members
