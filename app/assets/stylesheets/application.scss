@@ -1,0 +1,170 @@
+@import "./reset";
+@import "font-awesome";
+
+  //color
+$light_blue:#38AEF0;
+$strong_navy:#253141;
+$light_navy: #2f3e51;
+$border:#eeeeee;
+
+.header {
+  font-size: 10px;
+  background-color: $light_blue;
+  text-align: center;
+  color: white;
+}
+
+.wrapper{
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+  
+}
+.chat-side {
+  height: calc(100vh - 82px);
+  color: white;
+  font-weight: bold;
+  bottom: 0;
+  margin: 0;
+  padding: 0 ;
+  width: 300px;
+}
+
+  .side-header{
+    background-color: $strong_navy;
+    font-size: 16px;
+    box-sizing: border-box;
+    align-items: center;
+    height: 82px;
+    width: 300px;
+    padding: 20px;
+    display:flex;
+  }
+
+  .side-header__user_name{
+    font-weight: 700px;
+  }
+  .user-menu{
+    margin:200px;
+    display: flex;
+    flex-direction: row-reverse;
+    
+  }
+  .user-menu__edit-user{
+    padding:0 5px 0 0;
+  }
+    // .user-menu__new-group{
+    //   display: list-item;
+    // }
+
+
+  .groups{
+  background-color: $light_navy;
+  bottom: 0;
+  box-sizing: border-box;
+  font-size: 15px;
+  align-items: center;
+  justify-content: space-between;
+  overflow-x:scroll;
+  overflow-y:scroll;
+  width: 300px;
+  height: calc(100vh - 82px);
+  padding: 20px 20px 0 20px;
+  }
+
+  .chat-main{
+    // float:right;
+    height: 82px;
+    width:calc(100vw - 300px);
+  }
+  .main-header{
+    float: right;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    box-sizing: border-box;
+    display:flex;
+    padding: 0 ;
+    border:$border;
+  }
+.current-group{
+  display: box;
+  margin:35px;
+}
+.current-group__name{
+  color: #33333;
+  font-size: 20px;
+  font-weight: 400;
+}
+.member-list{
+  font-size:12px;
+  color:#999999;
+  display: flex;
+  margin: 0;
+}
+.main-header__edit-btn{
+  // float: right;
+  line-height: 40px;
+  padding: 0 20px;
+  margin-top: 30px;
+  border: solid 1px $light_blue;
+  color: $light_blue;
+}
+
+
+
+  .messages{
+    // box-sizing:border-box;
+    // display:block;
+    width: calc(100vw - 300px);
+    height: calc(100vh - 190px);
+    overflow-x: scroll;
+    overflow-y: scroll;
+    background-color: #fafafa;
+  }
+  .form{
+    width: calc(100vw - 300px);
+    position: absolute;;
+    bottom: 0;
+    height: 90px;
+    background-color: #ddd;
+    }
+
+  .new-massage{
+      height: 50px;
+      padding: 20px;
+      background-image: url("sicon16.gif");
+      border: solid 1px $light_blue;
+  }
+  .input-box{
+    font-family: FontAwesome;
+    text-decoration: inherit;
+    position:absolute;
+    height: 50px;
+    width: 800px;
+    padding: 10px;
+    right:0;
+  }
+
+  // .input-box{
+  //   font-family: FontAwesome;
+  //   font-style: normal;
+  //   font-weight: normal;
+  //   text-decoration: inherit;
+  //   }
+  input::-webkit-input-placeholder{
+    font-family: FontAwesome;
+    color: red;
+    text-align: center;
+    font-size: 16px;
+  }
+  
+  .new-message__submit-btn {
+    float:right;
+    width: 100px;
+    height: 50px;
+    padding: 0 30px;
+    margin-left: 15px;
+    background-color: #38aef0;
+    color: white;
+    cursor: pointer;
+}
