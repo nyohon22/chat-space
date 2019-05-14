@@ -19,8 +19,6 @@ Things you may want to cover:
 ## userテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false|
-|mailaddres|text|null: false,unique: true|
 |name|text|null: false, unique: true|
 
   
@@ -36,7 +34,7 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|body|text|null: false|
+|body|text||
 |image|string||
 |text_id|integer|null: false, foreign_key: references|
 |group_id|integer|null: false, foreign_key: references|
@@ -54,19 +52,20 @@ Things you may want to cover:
 ### Association
 
 ## user
-- belongs_to :members
-- has_many : messages
+- has_many :members 
+- has_many :groups, through: :members
 
 
 ## members
 - belongs_to :user
-- has_many : messages throug: :group
+- belongs_to :group
 
 ## messages
-- belongs_to :members
-- has_many :user trough: :group
+- belongs_to :group
+- belongs_to :user
 
 ## group
+- has_many :users, through: :members
 - has_many :members
 - has_many :messages
 
