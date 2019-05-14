@@ -23,6 +23,7 @@ Things you may want to cover:
 |mailaddres|text|null: false,unique: true|
 |name|text|null: false, unique: true|
 
+  
 
 ## membersテーブル
 
