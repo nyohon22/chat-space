@@ -6,7 +6,10 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
+  = render 'layouts/flash'
+  = yield
 
+  
 .header
   %p グループを作成しました
 
