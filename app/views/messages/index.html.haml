@@ -1,0 +1,41 @@
+!!!
+%html{lang: "ja"}
+  %head
+    %meta{charset: "utf-8"}
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+  = render 'layouts/flash'
+  = yield
+
+  
+.header
+  %p グループを作成しました
+
+.wrapper 
+  .chat-side
+    .side-header
+      %p.side-header__user_name
+      %ul.user-menu
+        %ul.user-menu__new-group
+          %i.fa.fa-cog
+        %ul.user-menu__edit-user
+          %i.fa.fa-edit
+    .groups
+      %p 仮
+
+  .chat-main
+    .main-header
+      %a.main-header__edit-btn Edit
+    .current-group
+      %h2.current-group__name グループ２
+      %ul.member-list
+        Member：
+        %li.member-list__member RYO
+      .message
+        .form
+          .input-box
+          %input.font-awesome{:type => "text",:placeholder => "&#xf03e;あああ" }
+          %i.fa.fa-image
+          %input.new-message__submit-btn{"data-disable-with" => "Send", :name => "commit", :type => "submit", :value => "Send"}/
